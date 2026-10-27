@@ -1,0 +1,14 @@
+{
+  "name": "formacity",
+  "metadata": {
+    "description": "Forma Campus presentation workflows for Claude Code and Codex."
+  },
+  "owner": { "name": "Forma City", "url": "https://forma.city" },
+  "plugins": [
+    {
+      "name": "campus",
+      "source": "./plugins/campus",
+      "description": "Prepare Monday Weekly Goals and Friday Ship & Show presentations in Forma Campus."
+    }
+  ]
+}

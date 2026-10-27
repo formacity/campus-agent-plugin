@@ -1,0 +1,12 @@
+{
+  "name": "formacity",
+  "interface": { "displayName": "Forma City" },
+  "plugins": [
+    {
+      "name": "campus",
+      "source": { "source": "local", "path": "./plugins/campus" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "Productivity"
+    }
+  ]
+}

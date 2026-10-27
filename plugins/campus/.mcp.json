@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "campus": {
+      "type": "http",
+      "url": "https://campus.forma.city/api/mcp"
+    }
+  }
+}
