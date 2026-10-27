@@ -8,7 +8,7 @@ Help the user explain what changed this week and show the work. Preserve the dif
 
 Read [the quality guide](../../guidance/quality.md) and [Campus operations](../../guidance/campus.md) before preparing the presentation. The user's request determines whether this is a conversation, a review or an edit; invoking the skill alone is not permission to change Campus.
 
-1. Read Campus context and the selected Friday presentation using the operations guide. Use an exact date returned by Campus and read the actual questions and existing answers.
+1. Read Campus context and the selected Friday presentation using the operations guide, or follow its chat-only path if the connection is unavailable. Use an exact date returned by Campus for any Campus operation and read the actual questions and existing answers.
 2. If Campus lists a Monday session for the same week, read that presentation as the source for the original goal. Do not modify it. If it is absent or blank, ask for the original goal rather than reconstructing it from what was completed. Distinguish the original commitment from a deliberate midweek change.
 3. Establish what actually shipped and its audience or state: prototype, internally usable, released to users or measured in use. Request the smallest useful proof the user can supply, such as a screenshot, demo, link, artifact, observed result or experiment summary. State what the evidence supports and what has not been checked.
 4. Compare the result with the goal. Describe unfinished work and blockers plainly, including a changed priority when relevant. If nothing shipped, explain the attempted work, evidence, decision and next step without relabeling it as a release.
