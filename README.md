@@ -67,6 +67,8 @@ Start a new chat after updating. This repository does not promise an automatic u
 
 `plugins/campus/` contains one shared copy of the skills and guidance. Its Claude-compatible manifest also loads in Codex. The two small catalogs at `.claude-plugin/marketplace.json` and `.agents/plugins/marketplace.json` point to that same package; they contain no duplicated skill content. This public repository contains no Campus app source, member data or credentials.
 
+Manual invocation is configured separately for each client: `disable-model-invocation` in skill frontmatter for Claude Code, and `policy.allow_implicit_invocation: false` in each skill's `agents/openai.yaml` for Codex.
+
 Validate locally:
 
 ```sh
