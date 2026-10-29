@@ -14,4 +14,4 @@ Connect the result to the original Monday goal when known. Use the matching Mond
 
 Use the deck's actual questions when available. Apply the **mom test** and **every word justifies its existence** to the screen content. Let a demo or artifact show the work; keep any useful spoken cues separate. See [examples](../../guidance/examples.md#friday).
 
-For Campus access, follow [Campus operations](../../guidance/campus.md). Prepare in chat unless the member has requested a Campus edit. Carry authorized edits through preview without asking again. If disconnected, continue preparing in chat and identify what remains unverified. Finish with the presentation and any material open point.
+For Campus access, follow [Campus operations](../../guidance/campus.md). Prepare in chat unless the member has requested a Campus edit. Carry authorized edits through preview without asking again. If disconnected, continue preparing in chat and identify what remains unverified. Return the screen draft first, followed only by a necessary spoken/demo cue or material open question. For a wording-only request, return only the revised wording.

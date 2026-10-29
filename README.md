@@ -10,7 +10,7 @@ The skills run only when you invoke them. They help prepare content in chat; a r
 
 ## Install
 
-Start in [Campus → MCP](https://campus.forma.city/desktop?app=agent-connections). Choose Claude Code or Codex, copy the install prompt and paste it into that agent. It installs the plugin, checks discovery and guides native sign-in. Setup is complete only after a read-only Campus request succeeds.
+Start in [Campus → Agents](https://campus.forma.city/desktop?app=agent-connections). Choose Claude Code or Codex, copy the setup prompt and paste it into that agent. It reuses an existing installation, checks skill discovery and guides native sign-in. Paste the same prompt again to resume incomplete setup. Setup is complete only after a read-only Campus request succeeds.
 
 For manual installation:
 
@@ -45,9 +45,9 @@ Invoke `$campus:monday` or `$campus:friday` from the skills picker. If they are 
 
 Use native OAuth to sign in with your Campus account. The presentation skills need read, edit and save access; offline access permits token refresh. Admins can optionally approve additional permissions on this same connection. Other members cannot grant or use admin access. Changing permissions requires reauthorization; it does not require another MCP entry. Existing standalone connections remain untouched.
 
-For admin setup, use the Campus install prompt even if the plugin is already installed. It reuses the plugin and offers reauthorization when needed. In Codex, admin tool approval overrides belong under `plugins."campus@formacity".mcp_servers.campus.tools.<tool>.approval_mode = "prompt"`, not a new `mcp_servers` entry. Claude Code requires interactive per-call approval. If the client cannot enforce these approvals, leave admin write permissions ungranted. The Monday/Friday skills do not perform admin operations.
+For admin setup, use the Campus setup prompt even if the plugin is already installed. It reuses the plugin and offers reauthorization when needed. In Codex, admin tool approval overrides belong under `plugins."campus@formacity".mcp_servers.campus.tools.<tool>.approval_mode = "prompt"`, not a new `mcp_servers` entry. Claude Code requires interactive per-call approval. If the client cannot enforce these approvals, leave admin write permissions ungranted. The Monday/Friday skills do not perform admin operations.
 
-If sign-in expires or fails, restart native authorization for the same connection. Retain safe error details without exposing tokens or authorization URLs. Distinguish plugin installation, pending sign-in and verified access; never treat configuration alone as a successful connection.
+Finish any required plugin reload before starting sign-in. If the browser does not open, use the client's native authentication UI. Check the login process result after consent; if it expires or fails, restart authorization on the same connection. Pending sign-in can expire while the conversation is paused. Retain safe error details without exposing tokens or authorization URLs, and confirm access with a successful read.
 
 Keep existing MCP connections and approval rules. The bundled connection points to `https://campus.forma.city/api/mcp`. It does not run a local server or bundle credentials. Use the plugin-provided Campus connection for these workflows; do not issue the same edit through two connections.
 
@@ -96,6 +96,6 @@ For an isolated install rehearsal, set `CLAUDE_CONFIG_DIR` or `CODEX_HOME` to a 
 
 Before a release, inspect both skills and their relative guidance links, validate the manifests, and rehearse clean Git-backed installs in both clients. Bump `plugins/campus/.claude-plugin/plugin.json` for every release, commit, tag `vX.Y.Z` and push the commit and tag together. Users track the default branch unless they deliberately pin a ref. Include no private examples, signed URLs or local configuration.
 
-The package contains no hooks, executables or background jobs. To remove it, use `claude plugin uninstall campus@formacity` or `codex plugin remove campus@formacity`. Revoke its Campus grant separately in Campus → MCP → My connections if you also want to remove account access.
+The package contains no hooks, executables or background jobs. To remove it, use `claude plugin uninstall campus@formacity` or `codex plugin remove campus@formacity`. Revoke its Campus grant separately in Campus → Agents → My connections if you also want to remove account access.
 
 Format references: [Claude Code plugins](https://code.claude.com/docs/en/plugins-reference), [Claude marketplace updates](https://code.claude.com/docs/en/plugins/host-marketplace#keep-users-up-to-date), [Codex plugin packaging](https://developers.openai.com/plugins/build/plugins).
