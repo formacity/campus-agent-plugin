@@ -1,35 +1,51 @@
-# Examples
+# Screen examples
 
-All names and numbers below are illustrative. Do not copy them into a member's presentation as facts.
+Fictional content illustrating the standard, not facts to copy or mandatory slide formats. Labels below separate screen content from spoken context; they are not slide headings. Fit the content to the real deck's questions.
 
 ## Monday
 
-Weak: "Work on onboarding."
+### A clear, bounded goal
 
-More useful: "New members cannot tell what to do after signing in. This week I will make the first useful action clear in the welcome flow and observe three new members trying it. By Friday I want a working flow and a record of where they got stuck."
+On screen:
 
-Why: it identifies a problem, a bounded change and observable evidence. The number is appropriate only if those sessions are feasible.
+> New members get stuck choosing a workspace.
+>
+> This week: test the simpler setup flow with new members.
 
-Weak: "Launch the whole dashboard, fix notifications and redesign the website."
+Spoken context, if useful: show where people get stuck and explain what the test should reveal. Only propose testing if access to participants is realistic.
 
-More useful: "The main goal is to let support find a customer's latest failed payment from one screen. Friday's proof will be a working internal demo using authorized sample data. Website polish is a side quest only if that path is complete."
+### A useful research outcome
 
-Why: it narrows a large project to one useful capability and makes the tradeoff explicit.
+On screen:
 
-For uncertain research: "We don't know which export format the partner can consume. I will test the two candidates against their sample importer and document the decision and limitations by Friday."
+> Choose a print finish that keeps detail in dark areas.
 
-Why: a decision supported by a bounded experiment can be a valid weekly outcome.
+Visual: the same photograph printed with different finishes.
+
+Spoken context: explain what the current samples lose and how the comparison will guide the exhibition prints.
 
 ## Friday
 
-Weak: "Shipped onboarding. Big improvement. Learned a lot."
+### Partial progress
 
-More useful: "The welcome flow is live for new members. Three observed sessions reached the first action; two still hesitated at the workspace picker. Here is the flow and the observation summary. This supports the navigation change, but we haven't measured longer-term activation. Next I would simplify the picker."
+On screen:
 
-Why: it distinguishes release, observation and unmeasured impact, and connects the learning to a change.
+> **Find a customer's failed payments**
+>
+> Search works. Failure reasons are still missing.
+>
+> Internal prototype
 
-When the goal was missed: "The goal was a working payment lookup by Friday. Search and the customer view work in an internal prototype; the failure details are blocked on a missing event field. Nothing is released to support yet. Testing showed that the proposed field name differs between providers. We will normalize that field before expanding the screen."
+Demo: show the working search.
 
-Why: it shows progress and a specific discovery without claiming delivery.
+Spoken context: the goal was a tool support could use; inconsistent provider data still blocks that. Do not describe the prototype as released.
 
-For a demo: show the shortest path that demonstrates the result, state who can access it, and keep a screenshot or artifact ready if the live service fails. Do not imply a recorded demo proves production availability.
+### A failed test with a clear implication
+
+On screen:
+
+> **The chair joint slips when weight is added**
+
+Visual: test footage of the joint slipping.
+
+Spoken context: explain the expected result and why the connection needs changing. The evidence carries the point; no paragraph is needed on screen.

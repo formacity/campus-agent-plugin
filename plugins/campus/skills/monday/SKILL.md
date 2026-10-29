@@ -1,18 +1,17 @@
 ---
 name: monday
-description: Prepare a Forma Campus Monday Weekly Goals presentation. Find the A+ problem, define a realistic outcome and evidence of success, and keep side quests subordinate. Use when the user invokes this skill to plan, review or update their Monday presentation.
+description: Prepare a Forma Campus Monday Weekly Goals presentation using the member's work and context. Help choose a clear, realistic goal. Manual invocation only.
 disable-model-invocation: true
 ---
 
-Help the user choose a worthwhile problem and turn it into a clear weekly commitment. Keep their voice. A concise, honest goal is better than a polished claim with no evidence.
+The member invoked this skill to prepare their Monday presentation, shown on screen while they speak to the cohort. Produce usable screen content.
 
-Read [the quality guide](../../guidance/quality.md) and [Campus operations](../../guidance/campus.md) before preparing the presentation. The user's request determines whether this is a conversation, a review or an edit; invoking the skill alone is not permission to change Campus.
+Follow the [update check](../../guidance/updates.md) once for this invocation.
 
-1. Read Campus context and the selected Monday presentation using the operations guide, or follow its chat-only path if the connection is unavailable. Use an exact session date returned by Campus for any Campus operation. Read the deck's actual questions; the template can change. Review existing answers before asking for information the user has already provided.
-2. Establish the A+ problem: who is affected, what is happening now, why it matters this week, and what remains uncertain. If the user has many priorities, help them choose the one whose resolution would matter most. Ask only for missing facts that materially affect the goal; bundle questions briefly.
-3. Turn the problem into a feasible Friday outcome. Distinguish an activity (build, research, meet) from its intended result. Agree on observable evidence of progress: an artifact, a working demo, a decision, a bounded experiment or an outcome measure the user can actually collect. Do not invent targets or force a numerical metric onto every goal.
-4. Identify a short path to that outcome and the main dependency or risk. Keep side quests limited and explicitly secondary. If the main goal is too large, narrow its audience, capability or experiment rather than implying the whole project will ship.
-5. Fit the story to the questions that exist in this deck. The default asks for the A+ problem and side quests; a goal and success evidence can sit within the problem answer. Do not add a slide for every coaching question. Use extra slides only when they help explain the work.
-6. If the user asked to edit or create the Campus presentation, apply only the requested changes using the operations guide. Otherwise show the proposed wording in chat. Preview any edits, inspect the layout, and report the exact date, saved status, any remaining uncertainty and the editor link.
+Read [the quality standard](../../guidance/quality.md). Start from the member's request, existing conversation and relevant work you already know. Propose a focus or draft; ask only about gaps that materially affect it. With no context, ask what they want to move forward this week. Keep improving the draft rather than running an interview.
 
-Use [Monday examples](../../guidance/examples.md#monday) to show what makes wording useful, not as facts to copy. End with a goal the user could fairly compare with Friday's evidence.
+Help choose a worthwhile problem, a realistic weekly outcome and what would demonstrate progress. Account for available time and dependencies; separate commitments from hoped-for results. Suggest a smaller useful outcome when needed. Keep side quests secondary. Nudge, then respect the member's choice.
+
+Use the deck's actual questions when available. Apply the **mom test** and **every word justifies its existence** to the screen content. Keep any useful spoken or demo cues separate; see [examples](../../guidance/examples.md#monday).
+
+For Campus access, follow [Campus operations](../../guidance/campus.md). Prepare in chat unless the member has requested a Campus edit. Carry authorized edits through preview without asking again. If disconnected, continue preparing in chat and identify what remains unverified. Finish with the presentation and any material open point.

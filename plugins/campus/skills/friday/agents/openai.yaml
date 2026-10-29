@@ -1,6 +1,6 @@
 interface:
   display_name: "Campus: Friday Ship & Show"
-  short_description: "Show what shipped, its evidence and what changed"
-  default_prompt: "Use $campus:friday to help me prepare my Friday Ship & Show presentation."
+  short_description: "Show your progress, evidence and learning clearly"
+  default_prompt: "Use $campus:friday to prepare my Friday presentation, starting from what you already know about my week."
 policy:
   allow_implicit_invocation: false

@@ -2,6 +2,12 @@
 
 Two manually invoked workflows for [Forma Campus](https://campus.forma.city): Monday **Weekly Goals** and Friday **Ship & Show**. They bundle presentation coaching, examples and the existing Campus MCP connection. Installation does not grant account access; Campus authorization happens separately in your agent.
 
+## Using the skills
+
+Invoke Monday or Friday in the conversation where your agent knows your work. It uses that context and, when connected, your Campus presentation to suggest a draft, clarify important gaps and improve the result. You can also start a fresh chat and supply the context. It does not have automatic access to your whole week or other apps.
+
+The skills run only when you invoke them. They help prepare content in chat; a request to create or update your Campus deck authorizes the edit. You can keep the work in chat without signing in. The current coaching principles are a first draft, pending alignment with the cohort lead.
+
 ## Install
 
 ### Claude Code
@@ -39,11 +45,13 @@ Keep existing MCP connections and approval rules. The bundled connection points 
 
 Try a read-only request first: "Use Campus to show my available Monday and Friday sessions. Do not change anything." Then, for example, invoke Monday with "Help me sharpen the goal in chat", or Friday with "Update my presentation for [the exact session date] using these results."
 
-**Campus edits save immediately.** For accounts with cohort access, edits are visible to the cohort. Other members' decks remain owner-only. The skills begin with reading and coaching; they change Campus only when your request authorizes an edit.
+**Campus edits save immediately.** For accounts with cohort access, edits are visible to the cohort. Other members' decks remain owner-only. The skills change Campus only when your request authorizes an edit, then preview the result. There is no separate publication step.
 
 ## Updates
 
 We release new guidance by changing the plugin version and pushing it to this repository. The hosted MCP updates independently; updating the app does not update installed skill files.
+
+From 0.1.3, invoking either skill asks your agent to compare its installed version with the public GitHub manifest. A newer version gets one update offer per version per conversation. Updates need your agreement; presentation work continues if you decline or the check is unavailable. This uses the agent’s existing read-only network tools, with no Campus sign-in, telemetry or background process. Versions 0.1.2 and earlier need one manual update to gain this check.
 
 For Claude Code, enable auto-update for **formacity** under `/plugin` → Marketplaces. It is off by default for custom marketplaces. To update manually in a terminal:
 
@@ -76,7 +84,7 @@ claude plugin validate .
 claude plugin validate plugins/campus
 ```
 
-For an isolated install rehearsal, set `CLAUDE_CONFIG_DIR` or `CODEX_HOME` to a fresh temporary directory before running the install commands with an absolute local marketplace path. Do not replace your everyday client configuration. A local install confirms packaging; it does not prove OAuth, model invocation, editing or rendering.
+For an isolated install rehearsal, set `CLAUDE_CONFIG_DIR` or `CODEX_HOME` to a fresh temporary directory before running the install commands with an absolute local marketplace path. Do not replace your everyday client configuration. A local install confirms packaging; it does not prove OAuth, model invocation, editing or rendering. Check behavior with an existing-context invocation, an empty chat, a narrow revision request, a declined suggestion, and an unfinished Friday goal. The agent should produce useful content without inventing facts, repeatedly questioning the member or editing Campus without a request. Check signed-in editing and preview separately with an authorized presentation.
 
 Before a release, inspect both skills and their relative guidance links, validate the manifests, and rehearse clean Git-backed installs in both clients. Bump `plugins/campus/.claude-plugin/plugin.json` for every release, commit, tag `vX.Y.Z` and push the commit and tag together. Users track the default branch unless they deliberately pin a ref. Include no private examples, signed URLs or local configuration.
 
