@@ -50,11 +50,11 @@ Skip registration if the matching marketplace exists. Codex desktop uses this sa
 
 Check the installed version and both skills in the client's catalog or picker. They are manual-only: absence from automatic suggestions is not a failure. Do not invoke a skill just to test installation.
 
-Complete any reload or new-chat step **before** OAuth; resume from the installed state. Use supported listings and discovery, not generated protocols or internal debug APIs.
+If the skills appear in the current chat, do not claim a new chat is required. Skill discovery and MCP availability are separate: continue authorization in this chat when the client allows it. Request a reload or new chat only for a verified loading limitation, then resume setup. Use supported listings and discovery, not generated protocols or internal debug APIs.
 
 ### 4. Connect
 
-Discover the bundled server's actual client-side name. Reuse working authorization; otherwise start native OAuth on that connection.
+Discover the bundled server's actual client-side name. Reuse working authorization; otherwise start native OAuth on that connection now. Ask the user to complete browser consent; do not end setup with only 'sign-in may be needed'.
 
 Presentation editing needs `presentations:read,presentations:draft,presentations:save`; read-only use needs `presentations:read`. Optional `offline_access` permits token refresh. See [Admin access](#admin-access) for additional permissions.
 
@@ -66,7 +66,7 @@ Check the login process result after consent. If the browser cannot open, give t
 
 Call `campus_presentations_context` once, or an authorized admin read if presentation access was declined. Make no Campus changes during setup.
 
-Report **connected** only after a successful read. Otherwise name the verified state and exact remaining step. Finish with the two skill invocations.
+Report **connected** only after a successful read. If the current chat cannot access the MCP tool, explain the verified limitation and the exact step needed to finish the read. Finish with the two skill invocations.
 
 ## Use the skills
 
