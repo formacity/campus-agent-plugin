@@ -50,7 +50,7 @@ Skip registration if the matching marketplace exists. Codex desktop uses this sa
 
 Check the installed version and both skills in the client's catalog or picker. They are manual-only: absence from automatic suggestions is not a failure. Do not invoke a skill just to test installation.
 
-If the skills appear in the current chat, do not claim a new chat is required. Skill discovery and MCP availability are separate: continue authorization in this chat when the client allows it. Request a reload or new chat only for a verified loading limitation, then resume setup. Use supported listings and discovery, not generated protocols or internal debug APIs.
+In Codex, skills installed during this turn may become available on the next turn in the same chat. If this turn cannot see them, do not infer that a new chat is required; ask the user to try them on the next turn here. Skill discovery and MCP availability are separate: continue authorization in this chat when the client allows it. Suggest a reload or new chat only if the client requires it or the skills remain unavailable on a later turn. Use supported listings and discovery, not generated protocols or internal debug APIs.
 
 ### 4. Connect
 
