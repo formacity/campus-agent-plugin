@@ -1,101 +1,137 @@
 # Campus agent plugin
 
-One connection to [Forma Campus](https://campus.forma.city), with two manually invoked presentation skills: Monday **Weekly Goals** and Friday **Ship & Show**. The same connection supports optional admin access for eligible accounts. Installing the plugin does not grant account access.
+Agent entry point. Follow the user's request: explain, install, update or modify the package.
 
-## Using the skills
+Two manually invoked presentation skills—Monday **Weekly Goals** and Friday **Ship & Show**—plus one authenticated Campus MCP connection. Shared by Claude Code and Codex.
 
-Invoke Monday or Friday in the conversation where your agent knows your work. It uses that context and, when connected, your Campus presentation to suggest a draft, clarify important gaps and improve the result. You can also start a fresh chat and supply the context. It does not have automatic access to your whole week or other apps.
-
-The skills run only when you invoke them. They help prepare content in chat; a request to create or update your Campus deck authorizes the edit. You can keep the work in chat without signing in.
+| Identifier | Value |
+| --- | --- |
+| Repository | `https://github.com/formacity/campus-agent-plugin` |
+| Marketplace / plugin | `formacity` / `campus@formacity` |
+| Package / version source | [`plugins/campus/`](plugins/campus/) / [manifest](plugins/campus/.claude-plugin/plugin.json) |
+| Bundled MCP | `https://campus.forma.city/api/mcp` — remote Streamable HTTP, native OAuth |
+| Campus connection management | [Campus → Agents](https://campus.forma.city/desktop?app=agent-connections) |
 
 ## Install
 
-Start in [Campus → Agents](https://campus.forma.city/desktop?app=agent-connections). Choose Claude Code or Codex, copy the setup prompt and paste it into that agent. It reuses an existing installation, checks skill discovery and guides native sign-in. Paste the same prompt again to resume incomplete setup. Setup is complete only after a read-only Campus request succeeds.
+Complete the missing steps. Do not send the user elsewhere to copy another installation prompt.
 
-For manual installation:
+### 1. Inspect
 
-### Claude Code
+Identify the current client; inspect its version, installed plugins and marketplaces. Ask only if the client is unclear. Reuse a matching installation and working authorization.
 
-In a Claude Code session:
+Report conflicting marketplace sources or local development copies before changing them. Preserve other plugins, connections, credentials and approval rules. Use the bundled connection; add no standalone MCP entry, proxy or local server.
 
-```text
-/plugin install campus --marketplace formacity/campus-agent-plugin
-```
+### 2. Install for this client
 
-Or from a terminal with Claude Code 2.1.292 or later:
+**Claude Code** — CLI 2.1.292+:
 
 ```sh
 claude plugin install campus --marketplace formacity/campus-agent-plugin
 ```
 
-On older versions, add the marketplace first with `/plugin marketplace add formacity/campus-agent-plugin`, then `/plugin install campus@formacity`. If the skills are missing after installation, reload plugins or start a new session. Invoke `/campus:monday` or `/campus:friday` with your request.
+If this version lacks `--marketplace`, register the source if missing, then install:
 
-### Codex
+```sh
+claude plugin marketplace add formacity/campus-agent-plugin
+claude plugin install campus@formacity
+```
 
-In a terminal with Codex CLI 0.160.0 or later:
+**Codex** — CLI 0.160.0+:
 
 ```sh
 codex plugin marketplace add formacity/campus-agent-plugin
 codex plugin add campus@formacity
 ```
 
-Invoke `$campus:monday` or `$campus:friday` from the skills picker. If they are missing after installation, start a new chat; no restart is needed when they already work. The same package can be installed through the Codex desktop plugin directory after registering the marketplace. Custom marketplace availability can depend on your client version and organization policy.
+Skip registration if the matching marketplace exists. Codex desktop uses this same package. If CLI or marketplace support is unavailable, give the required client update or native UI step.
 
-### Connect Campus
+### 3. Verify loading
 
-Use native OAuth to sign in with your Campus account. The presentation skills need read, edit and save access; offline access permits token refresh. Admins can optionally approve additional permissions on this same connection. Other members cannot grant or use admin access. Changing permissions requires reauthorization; it does not require another MCP entry. Existing standalone connections remain untouched.
+Check the installed version and both skills in the client's catalog or picker. They are manual-only: absence from automatic suggestions is not a failure. Do not invoke a skill just to test installation.
 
-For admin setup, use the Campus setup prompt even if the plugin is already installed. It reuses the plugin and offers reauthorization when needed. In Codex, admin tool approval overrides belong under `plugins."campus@formacity".mcp_servers.campus.tools.<tool>.approval_mode = "prompt"`, not a new `mcp_servers` entry. Codex must also use interactive human review (`approvals_reviewer = "user"` in the active chat); auto-review can approve MCP calls without asking you, even with `approval_mode = "prompt"`. Claude Code requires interactive per-call approval. If human review is unavailable or unverified, leave admin write permissions ungranted and do not use existing admin write access. The Monday/Friday skills do not perform admin operations.
+Complete any reload or new-chat step **before** OAuth; resume from the installed state. Use supported listings and discovery, not generated protocols or internal debug APIs.
 
-Finish any required plugin reload before starting sign-in. If the browser does not open, use the client's native authentication UI. Check the login process result after consent; if it expires or fails, restart authorization on the same connection. Pending sign-in can expire while the conversation is paused. Retain safe error details without exposing tokens or authorization URLs, and confirm access with a successful read.
+### 4. Connect
 
-Keep existing MCP connections and approval rules. The bundled connection points to `https://campus.forma.city/api/mcp`. It does not run a local server or bundle credentials. Use the plugin-provided Campus connection for these workflows; do not issue the same edit through two connections.
+Discover the bundled server's actual client-side name. Reuse working authorization; otherwise start native OAuth on that connection.
 
-Try a read-only request first: "Use Campus to show my available Monday and Friday sessions. Do not change anything." Then, for example, invoke Monday with "Help me sharpen the goal in chat", or Friday with "Update my presentation for [the exact session date] using these results."
+Presentation editing needs `presentations:read,presentations:draft,presentations:save`; read-only use needs `presentations:read`. Optional `offline_access` permits token refresh. See [Admin access](#admin-access) for additional permissions.
 
-**Campus edits save immediately.** For accounts with cohort access, edits are visible to the cohort. Other members' decks remain owner-only. The skills change Campus only when your request authorizes an edit, then preview the result. There is no separate publication step.
+Codex: `codex mcp login <discovered server name> --scopes <requested scopes>`. Claude Code: native MCP authentication. Keep credentials in native storage; never request or expose secrets or OAuth callback URLs.
+
+Check the login process result after consent. If the browser cannot open, give the native authentication step. On failure or expiry, retain the installation and restart sign-in on the same connection. Report safe error details; on resume, check the previous result or try a read first.
+
+### 5. Verify access
+
+Call `campus_presentations_context` once, or an authorized admin read if presentation access was declined. Make no Campus changes during setup.
+
+Report **connected** only after a successful read. Otherwise name the verified state and exact remaining step. Finish with the two skill invocations.
+
+## Use the skills
+
+| Client | Monday | Friday |
+| --- | --- | --- |
+| Claude Code | `/campus:monday` | `/campus:friday` |
+| Codex | `$campus:monday` | `$campus:friday` |
+
+Follow the installed skill and its relative guidance when invoked. Use available context without implying access to the member's whole week or other apps.
+
+Prepare in chat without sign-in. A request to create or update a Campus deck authorizes edits; a bare invocation does not. Edits autosave immediately: cohort-visible for accounts with cohort access, otherwise owner-only. No separate publish step. Follow [Campus operations](plugins/campus/guidance/campus.md) for editing and preview.
 
 ## Updates
 
-We release new guidance by changing the plugin version and pushing it to this repository. The hosted MCP updates independently; updating the app does not update installed skill files.
+Inspect the installation and marketplace source first. If Campus is absent, use [Install](#install). Do not replace a conflicting source or local development copy.
 
-From 0.1.3, invoking either skill asks your agent to compare its installed version with the public GitHub manifest. A newer version gets one update offer per version per conversation. Updates need your agreement; presentation work continues if you decline or the check is unavailable. This uses the agent’s existing read-only network tools, with no Campus sign-in, telemetry or background process. Versions 0.1.2 and earlier need one manual update to gain this check.
+When the user requests or accepts an update, run the relevant commands in the existing installation scope:
 
-For Claude Code, enable auto-update for **formacity** under `/plugin` → Marketplaces. It is off by default for custom marketplaces. To update manually in a terminal:
+**Claude Code**
 
 ```sh
 claude plugin marketplace update formacity
 claude plugin update campus@formacity
 ```
 
-Reload plugins or start a new session to use updated files.
+Keep the existing installation scope (`--scope` when needed). Follow the client's reload instruction.
 
-For Codex, refresh the marketplace and installed plugin explicitly:
+**Codex**
 
 ```sh
 codex plugin marketplace upgrade formacity
 codex plugin add campus@formacity
 ```
 
-Start a new chat after updating. This repository does not promise an automatic update schedule for Codex custom marketplaces.
+Start a new chat to load updated skills. Verify the installed version; do not confuse updated files with reloaded instructions. Preserve connections, credentials, approval rules and auto-update preferences. Request no additional Campus permissions.
 
-## Package and development
+Skills from 0.1.3 onward follow the [update-check instructions](plugins/campus/guidance/updates.md): compare with the public manifest, offer a newer version once per conversation, and continue if declined or unavailable. Older installations need a manual update to gain that check. Hosted MCP deployments and installed skill updates are independent.
 
-`plugins/campus/` contains one shared copy of the skills and guidance. Its Claude-compatible manifest also loads in Codex. The two small catalogs at `.claude-plugin/marketplace.json` and `.agents/plugins/marketplace.json` point to that same package; they contain no duplicated skill content. This public repository contains no Campus app source, member data or credentials.
+## Admin access
 
-Manual invocation is configured separately for each client: `disable-model-invocation` in skill frontmatter for Claude Code, and `policy.allow_implicit_invocation: false` in each skill's `agents/openai.yaml` for Codex.
+Use the same bundled connection. Admin eligibility is enforced by Campus, not by the plugin. Adding permissions requires native reauthorization, not another MCP entry. Use the account-specific setup prompt in [Campus → Agents](https://campus.forma.city/desktop?app=agent-connections) for the current admin scopes and protected tool list. Do not disconnect working access without explaining why reauthorization requires it.
 
-Validate locally:
+- **Codex:** protected tools need `approval_mode = "prompt"` under `plugins."campus@formacity".mcp_servers.campus.tools.<tool>`. Effective `approvals_reviewer` must be `"user"`; `"auto_review"` can approve calls without a human prompt. A config file alone does not prove the active policy.
+- **Claude Code:** preserve `anthropic/requiresUserInteraction=true` and interactive per-call approval. Do not add allow rules or perform admin writes headlessly.
+
+If human review is unavailable or unverified, leave admin write permissions ungranted and do not use existing admin write access. Do not change global approval settings or perform a write to test prompting. Monday/Friday skills require no admin operations.
+
+## Remove
+
+On request, run `claude plugin uninstall campus@formacity` in its existing scope or `codex plugin remove campus@formacity`. Revoke account access separately in Campus → Agents → My connections.
+
+## Work on this repository
+
+- Edit the shared package under `plugins/campus/`. Both [Claude](.claude-plugin/marketplace.json) and [Codex](.agents/plugins/marketplace.json) catalogs point there; do not duplicate skill content.
+- Preserve manual invocation: `disable-model-invocation: true` in each `SKILL.md`; `policy.allow_implicit_invocation: false` in each `agents/openai.yaml`.
+- Keep examples fictional. Include no member data, credentials, signed URLs or local configuration. The package has no hooks, executables or background jobs.
+- Validate manifests and relative guidance links. Keep this README's `#updates` anchor: installed skills link to it.
 
 ```sh
 claude plugin validate .
 claude plugin validate plugins/campus
 ```
 
-For an isolated install rehearsal, set `CLAUDE_CONFIG_DIR` or `CODEX_HOME` to a fresh temporary directory before running the install commands with an absolute local marketplace path. Do not replace your everyday client configuration. A local install confirms packaging; it does not prove OAuth, model invocation, editing or rendering. Check behavior with an existing-context invocation, an empty chat, a narrow revision request, a declined suggestion, and an unfinished Friday goal. The agent should produce useful content without inventing facts, repeatedly questioning the member or editing Campus without a request. Check signed-in editing and preview separately with an authorized presentation.
+Rehearse installs in fresh temporary `CLAUDE_CONFIG_DIR` and `CODEX_HOME` directories. Check real skill outputs with existing context, an empty chat, a narrow edit, a declined suggestion and unfinished Friday work. Packaging checks do not prove OAuth, tool execution or rendering; verify those separately when affected, using authorized isolated data.
 
-Before a release, inspect both skills and their relative guidance links, validate the manifests, and rehearse clean Git-backed installs in both clients. Bump `plugins/campus/.claude-plugin/plugin.json` for every release, commit, tag `vX.Y.Z` and push the commit and tag together. Users track the default branch unless they deliberately pin a ref. Include no private examples, signed URLs or local configuration.
+For a package release, bump the [manifest](plugins/campus/.claude-plugin/plugin.json), commit, tag `vX.Y.Z`, push the commit and tag together, and verify fresh Git-backed installs in both clients. Users track the default branch unless pinned. README-only changes outside the package do not require a plugin version bump.
 
-The package contains no hooks, executables or background jobs. To remove it, use `claude plugin uninstall campus@formacity` or `codex plugin remove campus@formacity`. Revoke its Campus grant separately in Campus → Agents → My connections if you also want to remove account access.
-
-Format references: [Claude Code plugins](https://code.claude.com/docs/en/plugins-reference), [Claude marketplace updates](https://code.claude.com/docs/en/plugins/host-marketplace#keep-users-up-to-date), [Codex plugin packaging](https://developers.openai.com/plugins/build/plugins).
+Client references: [Claude plugins](https://code.claude.com/docs/en/plugins-reference), [Codex plugin packaging](https://developers.openai.com/plugins/build/plugins).
