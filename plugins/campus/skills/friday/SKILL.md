@@ -4,14 +4,16 @@ description: Prepare a Forma Campus Friday Ship & Show presentation using the me
 disable-model-invocation: true
 ---
 
-The member invoked this skill to prepare their Friday presentation, shown on screen while they speak to the cohort. Produce usable screen content.
+The member invoked this skill to make their Friday presentation, projected while they speak. Produce usable screen content, not a coaching report.
 
-Follow the [update check](../../guidance/updates.md) once for this invocation.
+Follow the [update check](../../guidance/updates.md) once for this invocation. Read [the quality standard](../../guidance/quality.md).
 
-Read [the quality standard](../../guidance/quality.md). Start from the member's request, existing conversation and relevant work you already know. Draft the story from that context; check consequential gaps, including work that happened outside this chat. With no context, ask what changed this week.
+Start from the request, conversation and relevant work you already know. Draft from that context; ask only about gaps that materially change the story, including work outside this chat. With no context, ask what changed this week.
 
-Connect the result to the original Monday goal when known. Use the matching Monday deck or a clear prior commitment; if missing, ask briefly and proceed without inventing one. Explain what changed, what the member can show, and what they learned. Distinguish progress, release and measured impact. Make unfinished work or a changed direction clear without forcing a success story or a new commitment.
+Connect the result to Monday's goal when available from the matching deck or prior conversation. A missing goal does not block a useful update; do not invent one. Identify what changed, what demonstrates it and any learning that affects a decision. Distinguish progress, release and measured impact. Show unfinished work or a changed direction honestly, without forcing a success story or a new commitment.
 
-Use the deck's actual questions when available. Apply the **mom test** and **every word justifies its existence** to the screen content. Let a demo or artifact show the work; keep any useful spoken cues separate. See [examples](../../guidance/examples.md#friday).
+Use the deck's actual questions. Apply the **mom test** and **every word justifies its existence**: lead with the result or learning, then cut hard. Do not turn the week's activity into a recap. Let a demo or artifact carry the detail. See [screen examples](../../guidance/examples.md#friday).
 
-For Campus access, follow [Campus operations](../../guidance/campus.md). Prepare in chat unless the member has requested a Campus edit. Carry authorized edits through preview without asking again. If disconnected, continue preparing in chat and identify what remains unverified. Return the screen draft first, followed only by a necessary spoken/demo cue or material open question. For a wording-only request, return only the revised wording.
+Follow [Campus operations](../../guidance/campus.md) for access. Prepare in chat unless a Campus edit is authorized; carry authorized edits through preview without asking again. If disconnected, continue in chat and identify what remains unverified.
+
+Return only the screen draft by default. Do not append spoken notes, a rationale or optional questions. Add a question only when the answer is needed to use the draft; identify a visual or demo briefly only if the member supplied or described it. For a wording-only request, return only the revised wording.

@@ -1,51 +1,51 @@
 # Screen examples
 
-Fictional content illustrating the standard, not facts to copy or mandatory slide formats. Labels below separate screen content from spoken context; they are not slide headings. Fit the content to the real deck's questions.
+Fictional examples, not facts to copy or required formats. Fit the real deck's questions. Spoken context stays off the slides.
 
 ## Monday
 
-### A clear, bounded goal
+### A bounded experiment
 
-On screen:
-
-> New members get stuck choosing a workspace.
+> Can cafe staff use pickup reminders?
 >
-> This week: test the simpler setup flow with new members.
+> This week: watch 2 staff try a simulated reminder.
 
-Spoken context, if useful: show where people get stuck and explain what the test should reveal. Only propose testing if access to participants is realistic.
+Spoken context: three cafes agreed to try the app; real SMS awaits provider approval. “Simulated” stays on screen because it changes the claim.
 
-### A useful research outcome
+### A focused improvement
 
-On screen:
+> Make bike repairs easier to book.
+>
+> Thursday: 2 mechanics try clearer repair choices.
 
-> Choose a print finish that keeps detail in dark areas.
+Spoken context: three of four mechanics missed the repair selector. The two follow-up sessions are already arranged. The wider onboarding redesign and payment integration are outside this week's focus.
+
+### A research outcome
+
+> Choose a print finish that preserves detail in dark areas.
 
 Visual: the same photograph printed with different finishes.
 
-Spoken context: explain what the current samples lose and how the comparison will guide the exhibition prints.
-
 ## Friday
+
+### A test result
+
+> 2 staff tried the simulated reminder.
+>
+> Both missed the send button.
+
+Demo: show the flow. Only claim results the member actually reported.
 
 ### Partial progress
 
-On screen:
-
-> **Find a customer's failed payments**
+> Invoice search works. Failure reasons are still missing.
 >
-> Search works. Failure reasons are still missing.
->
-> Internal prototype
+> Local prototype · sample data
 
-Demo: show the working search.
+Demo: show the search. A list of tasks completed, coworker feedback and unmeasured impact would dilute the point. Do not call this released or proven to save time.
 
-Spoken context: the goal was a tool support could use; inconsistent provider data still blocks that. Do not describe the prototype as released.
+### A failed test
 
-### A failed test with a clear implication
+> The camping stool folded at 45 kg. Target: 80 kg.
 
-On screen:
-
-> **The chair joint slips when weight is added**
-
-Visual: test footage of the joint slipping.
-
-Spoken context: explain the expected result and why the connection needs changing. The evidence carries the point; no paragraph is needed on screen.
+Visual: test footage. Do not invent a cause or lesson before one is established.

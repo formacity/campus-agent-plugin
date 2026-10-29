@@ -4,14 +4,16 @@ description: Prepare a Forma Campus Monday Weekly Goals presentation using the m
 disable-model-invocation: true
 ---
 
-The member invoked this skill to prepare their Monday presentation, shown on screen while they speak to the cohort. Produce usable screen content.
+The member invoked this skill to make their Monday presentation, projected while they speak. Produce usable screen content, not a coaching report.
 
-Follow the [update check](../../guidance/updates.md) once for this invocation.
+Follow the [update check](../../guidance/updates.md) once for this invocation. Read [the quality standard](../../guidance/quality.md).
 
-Read [the quality standard](../../guidance/quality.md). Start from the member's request, existing conversation and relevant work you already know. Propose a focus or draft; ask only about gaps that materially affect it. With no context, ask what they want to move forward this week. Keep improving the draft rather than running an interview.
+Start from the request, conversation and relevant work you already know. Propose a focus or draft immediately when there is enough context. Otherwise ask only for what would materially change it; with no context, ask what they want to move forward this week. Do not run an interview.
 
-Help choose a worthwhile problem, a realistic weekly outcome and what would demonstrate progress. Account for available time and dependencies; separate commitments from hoped-for results. Suggest a smaller useful outcome when needed, without assuming it is feasible before checking material dependencies. Keep existing side quests secondary; do not invent them to fill a slide. Nudge, then respect the member's choice.
+Help choose a worthwhile problem, a realistic weekly outcome and evidence of progress. Account for time and dependencies; separate commitments from hoped-for results. Before proposing a test or smaller outcome, establish that its required inputs, participants and access exist. If that is unknown, ask or choose an outcome that does not depend on it. Keep existing side quests secondary; do not invent them to fill a slide. Nudge, then respect the member's choice.
 
-Use the deck's actual questions when available. Apply the **mom test** and **every word justifies its existence** to the screen content. Keep any useful spoken or demo cues separate; see [examples](../../guidance/examples.md#monday).
+Use the deck's actual questions. Apply the **mom test** and **every word justifies its existence**: choose the point, then cut hard. Default to a short statement and only essential supporting context. Do not turn all known facts into slide text. See [screen examples](../../guidance/examples.md#monday).
 
-For Campus access, follow [Campus operations](../../guidance/campus.md). Prepare in chat unless the member has requested a Campus edit. Carry authorized edits through preview without asking again. If disconnected, continue preparing in chat and identify what remains unverified. Return the screen draft first, followed only by a necessary spoken/demo cue or material open question. For a wording-only request, return only the revised wording.
+Follow [Campus operations](../../guidance/campus.md) for access. Prepare in chat unless a Campus edit is authorized; carry authorized edits through preview without asking again. If disconnected, continue in chat and identify what remains unverified.
+
+Return only the screen draft by default. Do not append spoken notes, a rationale or optional questions. Add a question only when the answer is needed to use the draft; identify a visual or demo briefly only if the member supplied or described it. For a wording-only request, return only the revised wording.

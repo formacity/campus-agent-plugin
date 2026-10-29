@@ -6,7 +6,7 @@ One connection to [Forma Campus](https://campus.forma.city), with two manually i
 
 Invoke Monday or Friday in the conversation where your agent knows your work. It uses that context and, when connected, your Campus presentation to suggest a draft, clarify important gaps and improve the result. You can also start a fresh chat and supply the context. It does not have automatic access to your whole week or other apps.
 
-The skills run only when you invoke them. They help prepare content in chat; a request to create or update your Campus deck authorizes the edit. You can keep the work in chat without signing in. The current coaching principles are a first draft, pending alignment with the cohort lead.
+The skills run only when you invoke them. They help prepare content in chat; a request to create or update your Campus deck authorizes the edit. You can keep the work in chat without signing in.
 
 ## Install
 
