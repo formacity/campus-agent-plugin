@@ -1,8 +1,11 @@
 {
   "name": "campus",
-  "version": "0.1.3",
-  "description": "Prepare Monday Weekly Goals and Friday Ship & Show presentations with evidence, clear goals and the Campus editor.",
-  "author": { "name": "Forma City", "url": "https://forma.city" },
+  "version": "0.1.4",
+  "description": "Monday and Friday presentation skills with one Campus connection and optional admin access.",
+  "author": {
+    "name": "Forma City",
+    "url": "https://forma.city"
+  },
   "homepage": "https://campus.forma.city",
   "repository": "https://github.com/formacity/campus-agent-plugin",
   "license": "MIT",

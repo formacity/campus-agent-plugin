@@ -1,6 +1,6 @@
 # Campus agent plugin
 
-Two manually invoked workflows for [Forma Campus](https://campus.forma.city): Monday **Weekly Goals** and Friday **Ship & Show**. They bundle presentation coaching, examples and the existing Campus MCP connection. Installation does not grant account access; Campus authorization happens separately in your agent.
+One connection to [Forma Campus](https://campus.forma.city), with two manually invoked presentation skills: Monday **Weekly Goals** and Friday **Ship & Show**. The same connection supports optional admin access for eligible accounts. Installing the plugin does not grant account access.
 
 ## Using the skills
 
@@ -9,6 +9,10 @@ Invoke Monday or Friday in the conversation where your agent knows your work. It
 The skills run only when you invoke them. They help prepare content in chat; a request to create or update your Campus deck authorizes the edit. You can keep the work in chat without signing in. The current coaching principles are a first draft, pending alignment with the cohort lead.
 
 ## Install
+
+Start in [Campus → MCP](https://campus.forma.city/desktop?app=agent-connections). Choose Claude Code or Codex, copy the install prompt and paste it into that agent. It installs the plugin, checks discovery and guides native sign-in. Setup is complete only after a read-only Campus request succeeds.
+
+For manual installation:
 
 ### Claude Code
 
@@ -24,7 +28,7 @@ Or from a terminal with Claude Code 2.1.292 or later:
 claude plugin install campus --marketplace formacity/campus-agent-plugin
 ```
 
-On older versions, add the marketplace first with `/plugin marketplace add formacity/campus-agent-plugin`, then `/plugin install campus@formacity`. Reload plugins or start a new session after installation. Run `/campus:monday` or `/campus:friday` with your request.
+On older versions, add the marketplace first with `/plugin marketplace add formacity/campus-agent-plugin`, then `/plugin install campus@formacity`. If the skills are missing after installation, reload plugins or start a new session. Invoke `/campus:monday` or `/campus:friday` with your request.
 
 ### Codex
 
@@ -35,11 +39,15 @@ codex plugin marketplace add formacity/campus-agent-plugin
 codex plugin add campus@formacity
 ```
 
-Start a new Codex chat after installation. Invoke `$campus:monday` or `$campus:friday` from the skills picker. The same package can be installed through the Codex desktop plugin directory after registering the marketplace. Custom marketplace availability can depend on your client version and organization policy.
+Invoke `$campus:monday` or `$campus:friday` from the skills picker. If they are missing after installation, start a new chat; no restart is needed when they already work. The same package can be installed through the Codex desktop plugin directory after registering the marketplace. Custom marketplace availability can depend on your client version and organization policy.
 
 ### Connect Campus
 
-When your client requests Campus authorization, use its native OAuth flow and sign in with your own Campus account. Select presentation access: read, edit and save; offline access permits token refresh. These skills need no admin permissions. Plugin connections may need their own authorization even if you previously connected Campus directly.
+Use native OAuth to sign in with your Campus account. The presentation skills need read, edit and save access; offline access permits token refresh. Admins can optionally approve additional permissions on this same connection. Other members cannot grant or use admin access. Changing permissions requires reauthorization; it does not require another MCP entry. Existing standalone connections remain untouched.
+
+For admin setup, use the Campus install prompt even if the plugin is already installed. It reuses the plugin and offers reauthorization when needed. In Codex, admin tool approval overrides belong under `plugins."campus@formacity".mcp_servers.campus.tools.<tool>.approval_mode = "prompt"`, not a new `mcp_servers` entry. Claude Code requires interactive per-call approval. If the client cannot enforce these approvals, leave admin write permissions ungranted. The Monday/Friday skills do not perform admin operations.
+
+If sign-in expires or fails, restart native authorization for the same connection. Retain safe error details without exposing tokens or authorization URLs. Distinguish plugin installation, pending sign-in and verified access; never treat configuration alone as a successful connection.
 
 Keep existing MCP connections and approval rules. The bundled connection points to `https://campus.forma.city/api/mcp`. It does not run a local server or bundle credentials. Use the plugin-provided Campus connection for these workflows; do not issue the same edit through two connections.
 
