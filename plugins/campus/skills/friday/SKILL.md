@@ -12,6 +12,8 @@ Start from the request, conversation and relevant work you already know. Draft f
 
 Use the matching Monday commitment supplied by Campus, preserving its exact wording and success criteria. Never recreate it from conversation or adjust it to match the result. If Campus says “No goal submitted,” keep that state and prepare the remaining slides. If the source is inaccessible, say it is unverified; do not claim no goal was submitted.
 
+The whole Friday presentation locks at 00:01 Saturday in Campus's returned timezone. Respect `editing.readOnly`; after the deadline, continue in chat without changing the saved deck.
+
 For Proof of Goal, state Hit or Missed against the original criterion when the result is known. Show how the goal was pursued through a demo, artifact or result, then measured impact where available. Keep activity lists off screen. Partial progress, failed experiments and changed direction can be valuable while the original goal remains missed. Without a submitted goal, show the work without assigning Hit or Missed. Ask about material evidence gaps rather than guessing the outcome.
 
 Match evidence to the claim: a prototype demonstrates functionality, not necessarily release, adoption or revenue. Keep qualifications that change the claim. Let “What did you learn?” remain open: surprising observations, failed assumptions and unanswered questions are welcome. Do not manufacture a lesson, decision, positive ending or next commitment.

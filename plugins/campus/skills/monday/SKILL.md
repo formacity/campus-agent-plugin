@@ -14,7 +14,7 @@ Choose one A+ goal that addresses the highest-priority business problem. Push fo
 
 For hardware, establish the current phase, the next milestone and evidence of completion. Challenge time estimates and dependencies. Keep optional side quests business-specific and secondary; exclude personal habits and leave the slide blank when none are needed.
 
-Put the commitment and success criteria together on the goal slide, with only essential problem context. The goal locks at 00:01 Tuesday in Campus's returned timezone. Respect the returned readOnly state; after the deadline, help with other slides without rewriting, weakening or backdating the goal.
+Put the commitment and success criteria together on the goal slide, with only essential problem context. The whole presentation locks at 00:01 Tuesday in Campus's returned timezone. Respect `editing.readOnly`; after the deadline, continue in chat without changing any slides or backdating the commitment.
 
 Use the deck's actual questions. Apply the **mom test** and **every word justifies its existence**: choose the point, then cut hard. Default to a short statement and only essential supporting context. Do not turn all known facts into slide text. See [screen examples](../../guidance/examples.md#monday).
 
