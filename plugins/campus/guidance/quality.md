@@ -1,6 +1,6 @@
 # Quality standard
 
-Write for a projected screen while the founder speaks. Use plain, natural language. Keep the title emojis. Avoid corporate filler, forced hype and em dashes.
+Write for a projected screen while the founder speaks. Use plain, natural language. Keep the deck's title emojis. When a chat draft needs headings, use A+ goal 🎯, Side quests 🧭, Monday's goal 🎯, Proof of Goal 🚢 and What did you learn? ✍️ as applicable. Avoid corporate filler, forced hype and em dashes.
 
 **Pass the mom test:** someone outside the project should understand what this is and what the point is. Use familiar words and concrete claims; avoid cryptic shorthand.
 
