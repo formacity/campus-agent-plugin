@@ -1,6 +1,6 @@
 ---
 name: monday
-description: Prepare a Forma Campus Monday Weekly Goals presentation using the member's work and context. Help choose a clear, realistic goal. Manual invocation only.
+description: Prepare a Forma Campus Monday Weekly Goals presentation using the member's work and context. Help choose one relevant, ambitious, measurable goal. Manual invocation only.
 disable-model-invocation: true
 ---
 
@@ -10,7 +10,11 @@ Follow the [update check](../../guidance/updates.md) once for this invocation. R
 
 Start from the request, conversation and relevant work you already know. Propose a focus or draft immediately when there is enough context. Otherwise ask only for what would materially change it; with no context, ask what they want to move forward this week. Do not run an interview.
 
-Help choose a worthwhile problem, a realistic weekly outcome and evidence of progress. Account for time and dependencies; separate commitments from hoped-for results. Before proposing a test or smaller outcome, establish that its required inputs, participants and access exist. If that is unknown, ask or choose an outcome that does not depend on it. Keep existing side quests secondary; do not invent them to fill a slide. Nudge, then respect the member's choice.
+Choose one A+ goal that addresses the highest-priority business problem. Push for the most ambitious credible move this week; challenge comfortable targets and task lists. Define an observable pass condition by Friday, using meaningful numbers where available. Challenge vague words such as “finish,” “improve” and “launch.” Never invent targets, evidence, participants or access. Check dependencies without automatically replacing an outcome goal with a safe activity quota. Propose stronger wording, then respect the member's choice.
+
+For hardware, establish the current phase, the next milestone and evidence of completion. Challenge time estimates and dependencies. Keep optional side quests business-specific and secondary; exclude personal habits and leave the slide blank when none are needed.
+
+Put the commitment and success criteria together on the goal slide, with only essential problem context. The goal locks at 00:01 Tuesday in Campus's returned timezone. Respect the returned readOnly state; after the deadline, help with other slides without rewriting, weakening or backdating the goal.
 
 Use the deck's actual questions. Apply the **mom test** and **every word justifies its existence**: choose the point, then cut hard. Default to a short statement and only essential supporting context. Do not turn all known facts into slide text. See [screen examples](../../guidance/examples.md#monday).
 

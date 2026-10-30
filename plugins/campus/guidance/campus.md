@@ -6,13 +6,16 @@ Use the installed Campus MCP connection. Base tool names below may have a client
 
 1. Call `campus_presentations_context`. Honor the requested date/week; otherwise use the relevant `defaultSessions` entry when available and consistent with the request. Match a returned session. Resolve relative dates using `today`/`timeZone`; ask only if selection remains ambiguous. Defaults may be past after the schedule ends.
 2. Call `campus_presentation_read` with `{kind, sessionDate}`. Use `draft ?? saved ?? starter`, including its actual prompts, answers and `slides[].id`. Reading an empty session creates no record. Preserve `openUrl`.
-3. For Friday, read Monday with the same returned `week` when available. Do not modify it. A missing goal does not block Friday.
+3. Read `goal` metadata when returned: `slideId`, `mondayDate`, `deadlineAt`, `timeZone` and `readOnly`. Monday's goal and success criteria lock at 00:01 Tuesday. Friday's goal is supplied by Campus and is always read-only. Read the matching Monday only for additional context; never copy a conversational reconstruction over the supplied goal. “No goal submitted” does not block Friday's other slides.
+4. Older stored presentations keep their own questions. Do not rewrite historical decks to fit the new format. If an older server does not expose goal metadata, do not claim locking or automatic carry-over is available; prepare the proposed format in chat and explain the missing capability.
 
 ## Edit
 
 A bare invocation or "help me prepare" means prepare in chat. A request to create, fill in or update the Campus presentation authorizes those changes, including an earlier request; do not ask again. Preserve native approvals. Use only media authorized for inclusion.
 
 Before the first edit, briefly explain that edits save immediately, with cohort or owner-only access according to `visibility`. If omitted by an older server, state the conditional rule: members with cohort access share edits; others keep them owner-only. There is no private staging step.
+
+Never include a read-only goal in an edit. A deadline rejection requires rereading the deck; do not retry with weaker criteria, another slide or a different date.
 
 Resolve material content choices in chat. Apply related changes together where practical; preserve unrelated content, media and starter questions. Do not save speculative alternatives or invented placeholders.
 

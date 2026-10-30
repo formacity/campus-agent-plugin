@@ -2,14 +2,14 @@
 
 Agent entry point. Follow the user's request: explain, install, update or modify the package.
 
-Two manually invoked presentation skills—Monday **Weekly Goals** and Friday **Ship & Show**—plus one authenticated Campus MCP connection. Shared by Claude Code and Codex.
+Two manually invoked presentation skills: Monday **Weekly Goals** and Friday **Ship & Show**, plus one authenticated Campus MCP connection. Shared by Claude Code and Codex.
 
 | Identifier | Value |
 | --- | --- |
 | Repository | `https://github.com/formacity/campus-agent-plugin` |
 | Marketplace / plugin | `formacity` / `campus@formacity` |
 | Package / version source | [`plugins/campus/`](plugins/campus/) / [manifest](plugins/campus/.claude-plugin/plugin.json) |
-| Bundled MCP | `https://campus.forma.city/api/mcp` — remote Streamable HTTP, native OAuth |
+| Bundled MCP | `https://campus.forma.city/api/mcp`. Remote Streamable HTTP, native OAuth |
 | Campus connection management | [Campus → Agents](https://campus.forma.city/desktop?app=agent-connections) |
 
 ## Install
@@ -24,7 +24,7 @@ Report conflicting marketplace sources or local development copies before changi
 
 ### 2. Install for this client
 
-**Claude Code** — CLI 2.1.292+:
+**Claude Code** (CLI 2.1.292+):
 
 ```sh
 claude plugin install campus --marketplace formacity/campus-agent-plugin
@@ -37,7 +37,7 @@ claude plugin marketplace add formacity/campus-agent-plugin
 claude plugin install campus@formacity
 ```
 
-**Codex** — CLI 0.160.0+:
+**Codex** (CLI 0.160.0+):
 
 ```sh
 codex plugin marketplace add formacity/campus-agent-plugin

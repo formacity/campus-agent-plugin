@@ -10,7 +10,11 @@ Follow the [update check](../../guidance/updates.md) once for this invocation. R
 
 Start from the request, conversation and relevant work you already know. Draft from that context; ask only about gaps that materially change the story, including work outside this chat. With no context, ask what changed this week.
 
-Connect the result to Monday's goal when available from the matching deck or prior conversation. A missing goal does not block a useful update; do not invent one. Identify what changed, what demonstrates it and any learning that affects a decision. Distinguish progress, release and measured impact. Show unfinished work or a changed direction honestly, without forcing a success story or a new commitment.
+Use the matching Monday commitment supplied by Campus, preserving its exact wording and success criteria. Never recreate it from conversation or adjust it to match the result. If Campus says “No goal submitted,” keep that state and prepare the remaining slides. If the source is inaccessible, say it is unverified; do not claim no goal was submitted.
+
+For Proof of Goal, state Hit or Missed against the original criterion when the result is known. Show how the goal was pursued through a demo, artifact or result, then measured impact where available. Keep activity lists off screen. Partial progress, failed experiments and changed direction can be valuable while the original goal remains missed. Without a submitted goal, show the work without assigning Hit or Missed. Ask about material evidence gaps rather than guessing the outcome.
+
+Match evidence to the claim: a prototype demonstrates functionality, not necessarily release, adoption or revenue. Keep qualifications that change the claim. Let “What did you learn?” remain open: surprising observations, failed assumptions and unanswered questions are welcome. Do not manufacture a lesson, decision, positive ending or next commitment.
 
 Use the deck's actual questions. Apply the **mom test** and **every word justifies its existence**: lead with the result or learning, then cut hard. Do not turn the week's activity into a recap. Let a demo or artifact carry the detail. See [screen examples](../../guidance/examples.md#friday).
 

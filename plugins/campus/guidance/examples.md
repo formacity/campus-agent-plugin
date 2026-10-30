@@ -1,51 +1,77 @@
 # Screen examples
 
-Fictional examples, not facts to copy or required formats. Fit the real deck's questions. Spoken context stays off the slides.
+Fictional examples, not facts to copy or required formats. Fit the real deck's questions. Spoken context stays off the slides. Targets must come from the founder's actual situation.
 
 ## Monday
 
+### An outcome goal
+
+> By Friday, 5 independent cafes have paid for their first month.
+>
+> We need to validate willingness to pay.
+
+Preparation: challenge whether five is the most ambitious credible target given the pipeline. Do not replace paid customers with outreach volume simply because replies are uncertain. Never invent the pipeline.
+
+### A hardware milestone
+
+> By Friday, the stool supports 80 kg for 60 seconds without collapsing.
+
+Preparation: identify the prototype phase, available materials, assembly and testing dependencies. Challenge the estimate for each phase. “Finish the stool” would leave success ambiguous.
+
 ### A bounded experiment
 
-> Can cafe staff use pickup reminders?
->
-> This week: watch 2 staff try a simulated reminder.
+> By Friday, 8 of 10 cafe staff send a simulated pickup reminder without help.
 
-Spoken context: three cafes agreed to try the app; real SMS awaits provider approval. “Simulated” stays on screen because it changes the claim.
+Preparation: participants and access must exist. Keep “simulated” because it changes the claim. Confirm that this experiment addresses the main business problem and that the target is meaningful.
 
-### A focused improvement
+### Side quests
 
-> Make bike repairs easier to book.
->
-> Thursday: 2 mechanics try clearer repair choices.
+> Renew the supplier agreement.
 
-Spoken context: three of four mechanics missed the repair selector. The two follow-up sessions are already arranged. The wider onboarding redesign and payment integration are outside this week's focus.
-
-### A research outcome
-
-> Choose a print finish that preserves detail in dark areas.
-
-Visual: the same photograph printed with different finishes.
+Optional, business-specific and secondary. Leave blank if there are none; do not add personal habits or a second A+ goal.
 
 ## Friday
 
-### A test result
+### Goal hit
 
-> 2 staff tried the simulated reminder.
+Monday's goal stays exactly as submitted:
+
+> By Friday, 5 independent cafes have paid for their first month.
 >
-> Both missed the send button.
+> We need to validate willingness to pay.
 
-Demo: show the flow. Only claim results the member actually reported.
+Proof of Goal:
 
-### Partial progress
+> Hit: 6 cafes paid for their first month.
 
-> Invoice search works. Failure reasons are still missing.
->
-> Local prototype · sample data
+Show the reported payment evidence with private customer details removed. A signup count would not prove this goal.
 
-Demo: show the search. A list of tasks completed, coworker feedback and unmeasured impact would dilute the point. Do not call this released or proven to save time.
+### Goal missed
 
-### A failed test
+Monday's goal stays exactly as submitted:
 
-> The camping stool folded at 45 kg. Target: 80 kg.
+> By Friday, the stool supports 80 kg for 60 seconds without collapsing.
 
-Visual: test footage. Do not invent a cause or lesson before one is established.
+Proof of Goal:
+
+> Missed: collapsed at 45 kg after 20 seconds.
+
+Show test footage. Do not invent the cause or reframe a useful test as a hit.
+
+### Learning without measured impact
+
+> Staff used the reminder to coordinate with the kitchen.
+
+Use only if actually observed. It does not require a revenue claim, next commitment or immediate decision.
+
+### No submitted goal
+
+Campus's goal slide:
+
+> No goal submitted
+
+Proof of Goal:
+
+> Invoice search works in a local prototype.
+
+Show the work without assigning Hit or Missed or reconstructing a Monday commitment. Missing access to Campus would instead mean the goal is unverified.
